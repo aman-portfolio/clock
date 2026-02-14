@@ -1,0 +1,23 @@
+<p id="second">0</p>
+<p id="minute">0</p>
+<p id="hour">0</p>
+
+<script>
+    let s=1;
+    let m=1;
+    let h=1;
+    let timer;
+
+    timer=setInterval(function(){
+        document.getElementById("second").innerText=s++;
+
+        if(s==61){
+             document.getElementById("minute").innerText=m++;
+             s=0;
+        }
+        if(s==61){
+             document.getElementById("hour").innerText=h++;
+             m=0;
+        }
+    },1000);
+</script>
